@@ -1,0 +1,15 @@
+{
+  "name": "classkart",
+  "version": "1.0.0",
+  "description": "ClassKart - Universal Class & Service Booker MVP",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ericcodesinjava <ericmathew200@gmail.com>",
+  "license": "UNLICENSED"
+}
