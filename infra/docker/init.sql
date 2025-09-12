@@ -1,4 +1,7 @@
--- create user if not exists
+-- Ensure the script runs in a valid context
+CREATE ROLE postgres WITH LOGIN SUPERUSER PASSWORD 'postgres_pass';
+
+-- Create user if not exists
 DO
 $do$
 BEGIN
@@ -10,7 +13,7 @@ BEGIN
 END
 $do$;
 
--- create dev database if not exists
+-- Create dev database if not exists
 DO
 $do$
 BEGIN
@@ -22,7 +25,10 @@ BEGIN
 END
 $do$;
 
--- connect to classkart_dev and create sample table
+-- Grant privileges to the user
+GRANT ALL PRIVILEGES ON DATABASE classkart_dev TO classkart_user;
+
+-- Connect to classkart_dev and create sample table
 \connect classkart_dev
 
 CREATE TABLE IF NOT EXISTS users (
