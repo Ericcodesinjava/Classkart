@@ -8,4 +8,4 @@ build/
 .env.production
 *.log
 coverage/
-.DS_Store
+.DS_Storeapps/api/src/firebase/*.json
